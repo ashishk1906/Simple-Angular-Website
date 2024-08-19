@@ -1,13 +1,22 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'simple-web-page';
+  displayText: string = 'This is the initial text.';
+  isDarkMode: boolean = false;
+
+  changeText() {
+    this.displayText = 'Text has been changed!';
+  }
+
+  toggleTheme() {
+    this.isDarkMode = !this.isDarkMode;
+    const theme = this.isDarkMode ? 'dark' : 'light';
+    document.body.setAttribute('data-bs-theme', theme);
+  }
 }

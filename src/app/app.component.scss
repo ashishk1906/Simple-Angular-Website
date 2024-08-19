@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .sticky-header {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: #f8f9fa;
+    padding: 10px;
+    box-shadow: 0 4px 2px -2px gray;
+    z-index: 1000;
+  }
+  
+  .content {
+    padding: 20px;
+  }
+  
+  .spacer {
+    height: 2000px;
+  }
+  
